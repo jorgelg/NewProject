@@ -1,0 +1,47 @@
+﻿
+@model IEnumerable<NewProject.Models.Alumnos>
+
+@{
+    ViewBag.Title = "Alumnos";
+    var contador = 1;
+}
+
+<h2>Formulario</h2>
+
+<table class="table table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th style="text-align:center;">Nro.</th>
+
+            <th style="text-align:center;">Nombres</th>
+            <th style="text-align:center;">Apellido Paterno</th>
+            <th style="text-align:center;">Apellido Materno</th>
+            <th style="text-align:center;">CI</th>
+            <th style="text-align:center;">Telefono</th>
+            <th style="text-align:center;">Email</th>
+            <th style="text-align:center;">Colegio</th>
+            <th style="text-align:center;">Curso</th>
+            <th style="text-align:center;">Carrera de Interés</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="text-align:center;">@contador</td>
+                    <td style="text-align:center;">@Html.DisplayFor(modelItem=>item.Personas_Naturales.Nombres)</td>
+                    <td style="text-align:center;">@Html.DisplayFor(modelItem=>item.Personas_Naturales.Apellido_Paterno)</td>
+                    <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Personas_Naturales.Apellido_Materno)</td>
+                    <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Personas_Naturales.CI)</td>
+                    <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Telefono)</td>
+                    <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Personas_Naturales.Email)</td>
+                    <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Colegio)</td>
+                    <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Curso)</td>
+                    <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Carrera)</td>
+
+                </tr>
+                contador++;
+            }
+    </tbody>
+</table>

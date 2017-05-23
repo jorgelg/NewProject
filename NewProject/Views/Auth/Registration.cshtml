@@ -1,0 +1,48 @@
+﻿@model NewProject.Models.Usuarios
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>Registration</h2>
+@foreach (ModelState modelState in ViewData.ModelState.Values)
+{
+    if (modelState.Errors.Count > 0)
+    {
+        <div class="alert alert-danger">
+            <span class="glyphicon glyphicon-danger-sign"></span>
+            <strong>Error</strong>
+            @{
+                foreach (ModelError error in modelState.Errors)
+                {
+                    <p>@error.ErrorMessage</p>
+                }
+            }
+        </div>
+                    }
+
+                }
+
+@Html.ValidationSummary(true)
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(u=>u.Personas_con_Accesos.Personas_Naturales.Nombres)<br />
+    @Html.TextBoxFor(u=>u.Personas_con_Accesos.Personas_Naturales.Nombres)<br />
+    @Html.LabelFor(u=>u.Personas_con_Accesos.Personas_Naturales.Apellido_Paterno)<br />
+    @Html.TextBoxFor(u=>u.Personas_con_Accesos.Personas_Naturales.Apellido_Paterno)<br />
+    @Html.LabelFor(u => u.Personas_con_Accesos.Personas_Naturales.Apellido_Materno)<br />
+    @Html.TextBoxFor(u => u.Personas_con_Accesos.Personas_Naturales.Apellido_Materno)<br />
+    @Html.LabelFor(u=>u.Personas_con_Accesos.Personas_Naturales.CI)<br />
+    @Html.TextBoxFor(u=>u.Personas_con_Accesos.Personas_Naturales.CI)<br />
+    @Html.LabelFor(u=>u.Personas_con_Accesos.Personas_Naturales.Email)<br />
+    @Html.TextBoxFor(u=> u.Personas_con_Accesos.Personas_Naturales.Email)<br />
+    @Html.LabelFor(u=>u.UserId)<br />
+    @Html.TextBoxFor(u=>u.UserId)<br />
+    @Html.LabelFor(u=>u.Password)<br />
+    @Html.PasswordFor(u=>u.Password)<br />
+    @Html.Label("Confirmar Contraseña")<br />
+    <input type="password" name="confirmacion"/><br />
+    <p>
+        <button type="submit"> Registrar </button>
+    </p>
+}

@@ -1,0 +1,38 @@
+﻿@model NewProject.Models.Usuarios
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@foreach (ModelState modelState in ViewData.ModelState.Values)
+{
+    if (modelState.Errors.Count > 0)
+    {
+        <div class="alert alert-danger">
+            <span class="glyphicon glyphicon-danger-sign"></span>
+            <strong>Error</strong>
+            @{
+                foreach (ModelError error in modelState.Errors)
+                {
+                    <p>@error.ErrorMessage</p>
+                }
+            }
+        </div>
+     }
+
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(u=>u.UserId)<br />
+    @Html.TextBoxFor(u=>u.UserId)<br />
+    @Html.LabelFor(u=>u.Password)<br />
+    @Html.PasswordFor(u=>u.Password)<br />
+    <p>
+        <button type="submit">Log In</button>
+    </p>
+}
+

@@ -1,0 +1,555 @@
+﻿
+@{
+    ViewBag.Title = "Inicio";
+}
+
+
+<!--Formulario de Visita!-->
+<form id="formularioModal" class="modal multi-step" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                <h4 class="modal-title step-2" data-step="1"><strong>Formulario de Visita </strong></h4>
+                <h4 class="modal-title step-2" data-step="2">PARTE 2 DEL FORMULARIO</h4>
+            </div>
+
+            <div class="modal-body step step-1">
+
+                <form class="form-horizontal" id="visitanteFormModal" method="post" action="/prueba/prueba/cargar/////">
+
+                    <div class="form-group" id="visita-nombre">
+
+                        <label for="visita-nombre" class="col-sm-2 control-label"> Nombre </label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Ingresar Nombres" required>
+                        </div>
+
+                        <label for="visita-nombre" class="col-sm-2 control-label"> Apellido </label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="Apellido" placeholder="Ingresar Apellidos" name="apellido" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group" id="visita-telf">
+
+
+                        <label for="visita-telf" class="col-sm-2 control-label"> Tel&eacute;fono </label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="Telefono" placeholder="Ingresar Tel&eacute;fono" name="telefono" required>
+                        </div>
+
+
+                        <label for="visita-cel" class="col-sm-2 control-label"> Celular </label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="Celular" placeholder="Ingresar Celular" name="celular">
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-group" id="visita-telf">
+
+
+                        <label for="visita-email" class="col-sm-2 control-label"> E-mail </label>
+
+                        <div class="col-sm-5">
+                            <input type="email" class="form-control" id="Email" placeholder="Ingrese su E-mail" name="email" required>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group" id="visita-col">
+
+                        <label for="visita-col" class="col-sm-2 control-label"> Col&eacute;gio </label>
+
+                        <div class="col-sm-6">
+
+                            <input type="text" class="form-control" placeholder="Seleccione o Ingrese su Col&eacute;gio" list="colegios" id="Colegio" name="Colegio" required>
+                            <!--Lista de Colegios-->
+                            <datalist id="colegios">
+                                <option>La Salle</option>
+                                <option>Juan Pablo II</option>
+                                <option>Britanico</option>
+                                <option>Boliviano Americano</option>
+                                <option>Marista</option>
+                            </datalist>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group" id="visita-curso">
+
+                        <label for="visita-curso" class="col-sm-2 control-label"> Curso </label>
+
+                        <div class="col-sm-4">
+                            <select class="form-control" name="Curso" required>
+                                <option>1° de Secundaria</option>
+                                <option>2° de Secundaria</option>
+                                <option>3° de Secundaria</option>
+                                <option>4° de Secundaria</option>
+                                <option>5° de Secundaria</option>
+                                <option>6° de Secundaria</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group" id="visita-col">
+
+                        <label for="visita-col" class="col-sm-2 control-label"> Carrera de Interes </label>
+
+                        <div class="col-sm-6">
+
+                            <input type="text" class="form-control" placeholder="Seleccione o Ingrese una Carrera" list="carreras" id="Carrera" name="Carrera" required>
+                            <!--Lista de Colegios-->
+                            <datalist id="carreras">
+                                <option>Ingenier&iacute;a en Sistemas </option>
+                                <option>Ingenier&iacute;a Industrial</option>
+                                <option>Ingenier&iacute;a Electronica</option>
+                                <option>Ingenier&iacute;a Informatica</option>
+                                <option>Ingenier&iacute;a de Petroleo y Gas Natural</option>
+                                <option>Ingenier&iacute;a de Redes y Telecomunicaciones</option>
+                                <option>Ingenier&iacute;a Civil</option>
+                                <option>Arquitectura</option>
+                                <option>Dise&#241;o Industrial</option>
+                                <option>Administracion de Empresas</option>
+                                <option>Auditoria y Finanzas</option>
+                                <option>Comercio Internacional</option>
+                                <option>Ingenier&iacute;a Comercial</option>
+                            </datalist>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div class="form-group" id="encuesta-publicidad">
+
+                        <label for="encuesta-publicidad" class="col-sm-12"> Donde viste la publicidad de la UPSA? </label>
+
+                        <div class="col-sm-12">
+                            <div class="col-sm-6">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Cine" name="Cine" value=1>Cine</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Mail" name="Mail" value=1>Mail</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Facebook" name="Facebook" value=1>Facebook</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Otros_Sitios" name="Otros_Sitios" value=1>Otros Sitios de Internet</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Prensa" name="Prensa" value=1>Prensa</label>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Radio" name="Radio" value=1>Radio</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Revista" name="Revista" value=1>Revista</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Television" name="Television" value=1>Televisi&oacute;n</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Valla" name="Valla" value=1>Valla</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div class="form-group" id="encuesta-persona">
+
+                        <label for="encuesta-persona" class="col-sm-12"> Qui&eacute;n te ha hablado de la UPSA? </label>
+
+                        <div class="col-sm-6">
+                            <div class="col-sm-6">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Amigo" name="Amigo" value=1>Amigo</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Familiar" name="Familiar" value=1>Familiar</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Padres" name="Padres" value=1>Padres</label>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Profesionales" name="Profesionales" value=1>Profesionales</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Profesor" name="Profesor" value=1>Profesor</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="Otros" name="Otros" value=1>Otros</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group" id="encuesta-prioridad">
+
+                        <label for="visita-col" class="col-sm-12">Por favor Seleccione 3 universidades segun su criterio </label>
+
+                        <label class="sr-only" for="prioridad1">Prioridad1:</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">1.-</div>
+                            <input type="text" class="form-control" id="Universidad1" name="Universidad1" placeholder="Seleccione Una Universidad"
+                                   list="universidades">
+                        </div>
+
+                        <label class="sr-only" for="prioridad2">Prioridad2:</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">2.-</div>
+                            <input type="text" class="form-control" id="Universidad2" name="Universidad2" placeholder="Seleccione Una Universidad"
+                                   list="universidades">
+                        </div>
+
+                        <label class="sr-only" for="prioridad3">Prioridad3:</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">3.-</div>
+                            <input type="text" class="form-control" id="Universidad3" name="Universidad3" placeholder="Seleccione Una Universidad"
+                                   list="universidades">
+                        </div>
+
+
+                        <!--Lista de Universidades-->
+                        <datalist id="universidades">
+                            <option>UPSA</option>
+                            <option>UTEPSA</option>
+                            <option>UDABOL</option>
+                            <option>UAGRM</option>
+                            <option>UCEBOL</option>
+                            <option>UDI</option>
+                            <option>NUR</option>
+                            <option>DOMINGO SAVIO</option>
+                            <option>CUMBRE</option>
+                        </datalist>
+
+                    </div>
+
+
+
+                    <div class="form-group" id="encuesta-criterio">
+
+                        <label for="encuesta-criterio" class="col-sm-12"> A tu criterio, que es lo mas importante en una universidad? </label>
+
+                        <div class="col-sm-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" id="Calidad" name="Calidad" value=1>Calidad de la ense&#241;anza</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input type="checkbox" id="Docente" name="Docentes" value=1>Docentes</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input type="checkbox" id="Infraestructura" name="Infraestructura" value=1>Infraestructura</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input type="checkbox" id="Oferta" name="Oferta" value=1>Oferta de Carreras</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input type="checkbox" id="Precio" name="Precio" value=1>Precio</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input type="checkbox" id="Tecnologia" name="Tecnologia" value=1>Tecnologia</label>
+                            </div>
+
+                            <div class="form-group" id="criterio-otro">
+                                <p for="visita-email" class="col-sm-1 control-label">Otro </p>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="criterio" name="criterio">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="form-group" id="encuesta-opinion">
+
+                        <label for="opinion" class="col-sm-10"> Cual es tu expectativa de la PromoUPSA? </label>
+                        <div class="col-sm-11">
+                            <textarea class="form-control" rows="5" id="expectativa" name="expectativa"></textarea>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                </form>
+
+
+
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>Recordatorio:</strong> El llenado de formulario le permitira participar de un sorteo al finalizar el evento.
+                </div>
+
+
+            </div>
+            <div class="modal-body step step-2">
+                Segunda Parte del Formulario
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" name="submit" id="submit" value="Submit" class="btn btn-primary btn-success col-sm-6">Enviar Formulario</button>
+
+                        <button type="button" class="btn btn-default col-sm-3" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</form>
+
+
+
+
+<header class="jumbotron">
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="container">
+        <div class="row row-header">
+            <div class="col-sm-4">
+                <h2>PromoUPSA</h2>
+                <p style="padding:40px;"></p>
+                <p>Este jueves 21 y viernes 22 de mayo recibiremos la visita de alrededor de 40 colegios</p>
+                <br />
+
+
+
+
+            </div>
+
+            <div class="col-sm-5">
+                <p style="padding:20px;"></p>
+                <img src="~/Resources/img/promoUPSA15.jpg" class="img-responsive">
+            </div>
+
+            <div class="col-sm-3">
+                <p style="padding:80px;"></p>
+                @*<button class="btn btn-default" data-toggle="modal" data-target="#demo-modal-2">Show</button>*@
+                <button class="btn btn-success btn-xs-12" id="visita-link">Llenar de Formulario</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!--formating the content-->
+<div class="container" style="padding-top: 1cm;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10">
+            <div class="row">
+                <div class="col-xs-12">
+                    <!--adding breadcrumb-->
+                    <ul class="breadcrumb">
+                        <li class="active"> <a href="#">Home</a> </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12">
+                    <h1>Bienvenidos</h1>
+                    <hr>
+                </div>
+            </div>
+            <div id="history" class="row row-content">
+                <div class="col-xs-12 col-sm-6 col-lg-7">
+                    <h2>Nuestro Evento</h2>
+                    <p>
+                        Como cada año los estudiantes de promoción de los distintos colegios de la ciudad son invitados a visitar el campus para conocer a la UPSA como institución educativa, así como los recursos de los que dispone y las unidades que la conforman.
+                        Todo esto como parte de la PromoUPSA, una actividad que genera una experiencia de contacto directo con los bachilleres, llevándolos a un recorrido por todo el campus, para que conozcan las diferentes unidades de la Universidad. Estos serán acompañados por estudiantes UPSA, quienes les explicaran su propia experiencia universitaria.
+                        Cada una de las carreras es presentada a los estudiantes a través de alguna actividad de exposición que proyecte las bases más importantes de la decisión de formación profesional del estudiante: qué le gusta, en qué es bueno y cuál es el área que le despierta ese interés natural que será parte fundamental de su vida.
+                        Además conocen las diferentes unidades de la Universidad que son parte de su formación personal y profesional, como ser la actividad deportiva (Coordinación de Deportes) y cultural (Extensión Cultural). Asimismo se informan sobre el rol de Departamento de Asesoría y Bienestar Estudiantil – DABE en el desarrollo de la experiencia universitaria y el Centro de Asesoramiento y Consultoría Empresarial – CENACE que posibilita la formación y educación continua del estudiante y graduado.
+                    </p>
+                    <p>Suspendisse varius tellus eu justo suscipit, quis ultrices massa volutpat. Suspendisse tincidunt eros eget justo molestie mattis. <em>The Frying Pan</em>,Ut placerat justo vitae sapien varius, id ornare nisl sollicitudin. Maecenas eget laoreet massa, sed mattis mauris. Nullam eu finibus justo, vitae varius mi. In rutrum placerat lectus, in viverra arcu iaculis sed.</p>
+
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-5">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" align="center">Informacion del Evento</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="dl-horizontal">
+                                <dt>Inicio</dt>
+                                <dd>21 Mayo 2015</dd>
+                                <dt>Cantidad de Guias</dt>
+                                <dd>40</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="corporate" class="row row-content">
+                <div class="col-xs-12">
+                    <h2>Personal</h2>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingPeter">
+                                <h3 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#peter"
+                                       aria-expanded="true" aria-controls="peter">
+                                        Peter Pan <small>Chief Epicurious Officer</small>
+                                    </a>
+                                </h3>
+                            </div>
+                            <div role="tabpanel" class="panel-collapse collapse in"
+                                 id="peter" aria-labelledby="headingPeter">
+                                <div class="panel-body">
+                                    <p>Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingDanny">
+                                <h3 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#danny"
+                                       aria-expanded="false" aria-controls="danny">
+                                        Dhanasekaran Witherspoon <small>Chief Food Officer</small>
+                                    </a>
+                                </h3>
+                            </div>
+                            <div role="tabpanel" class="panel-collapse collapse"
+                                 id="danny" aria-labelledby="headingDanny">
+                                <div class="panel-body">
+                                    <p>Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingAgumbe">
+                                <h3 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#agumbe"
+                                       aria-expanded="false" aria-controls="agumbe">
+                                        Agumbe Tang <small>Chief Taste Officer</small>
+                                    </a>
+                                </h3>
+                            </div>
+                            <div role="tabpanel" class="panel-collapse collapse"
+                                 id="agumbe" aria-labelledby="headingAgumbe">
+                                <div class="panel-body">
+                                    <p>Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingAlberto">
+                                <h3 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                       data-parent="#accordion" href="#alberto"
+                                       aria-expanded="false" aria-controls="alberto">
+                                        Alberto Somayya <small>Executive Chef</small>
+                                    </a>
+                                </h3>
+                            </div>
+                            <div role="tabpanel" class="panel-collapse collapse"
+                                 id="alberto" aria-labelledby="headingAlberto">
+                                <div class="panel-body">
+                                    <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of Accordion-->
+                </div>
+            </div>
+
+        </div>
+        <nav class="hidden-xs col-sm-2" id="myScrollspy">
+            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="400">
+                <li><a href="#history">Nuestro Evento</a></li>
+                <li><a href="#corporate">Personal</a></li>
+                <li><a href="#facts">Objetivo</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<footer class="row-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-sm-5">
+                <h5>Our Address</h5>
+                <address>
+                    121, Parque industrial<br>
+                    Santa Cruz de la Sierra<br>
+                    <i class="fa fa-phone"></i>: +591 3358665<br>
+                    <i class="fa fa-fax"></i>:   +591 3551225<br>
+                    <i class="fa fa-envelope"></i>:
+                    <a href="mailto:upsa@promoupsa.net">upsa@promoupsa.net</a>
+                </address>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="nav navbar-nav" style="padding: 40px 10px;">
+                    <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/boliviaupsa/photos/?tab=album&album_id=895904543785783"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/upsabolivia"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-youtube" href="https://www.youtube.com/user/UniversidadUPSA"><i class="fa fa-youtube"></i></a>
+                    <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <p style="padding:10px;"></p>
+                <p align=center>© Copyright 2015 Ristorante Con Fusion</p>
+            </div>
+        </div>
+    </div>
+</footer>

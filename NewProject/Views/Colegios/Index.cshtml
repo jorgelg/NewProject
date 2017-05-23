@@ -1,0 +1,39 @@
+﻿@model IEnumerable<NewProject.Models.Colegios_Ciudades_Turnos>
+@{
+    ViewBag.Title = "ColegioIndex";
+    var contador = 1;
+}
+
+<h2>Colegio</h2>
+<p>
+    @Html.ActionLink("Registrar nuevo colegio","Nuevo","Colegios")
+</p>
+
+<table class="table table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th style="text-align:center;">Nro</th>
+            <th style="text-align:center;">Nombre</th>
+            <th style="text-align:center;">Direccion</th>
+            <th style="text-align:center;">Email</th>
+            <th style="text-align:center;">Turno</th>
+            <th style="text-align:center;">Director</th>
+            <th style="text-align:center;">Contacto</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="text-align:center;">@contador</td>
+                <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Colegios.Nombre)</td>
+                <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Colegios.Direccion)</td>
+                <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Colegios.Email)</td>
+                <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Turnos.Descripcion)</td>
+                <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Turnos.Directores.Personas_con_Accesos.Personas_Naturales.Nombres)</td>
+                <td style="text-align:center;">@Html.DisplayFor(modelItem => item.Turnos.Contactos.Personas_con_Accesos.Personas_Naturales.Nombres)</td>
+            </tr>
+            contador++;
+        }
+    </tbody>
+</table>
